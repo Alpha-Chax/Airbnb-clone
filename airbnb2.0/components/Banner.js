@@ -7,6 +7,9 @@ function Banner() {
         src="https://links.papareact.com/0fm"
         fill
         style={{ objectFit: "cover" }}
+        alt="Banner"
+        sizes="auto"
+        priority
       />
       <div className="absolute top-1/2 w-full text-center">
         <p>Not sure where to go? Perfect.</p>

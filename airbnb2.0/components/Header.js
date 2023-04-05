@@ -16,7 +16,10 @@ function Header() {
           <Image
             src="https://links.papareact.com/qd3"
             fill
+            sizes="auto"
             style={{ objectFit: "contain", objectPosition: "left" }}
+            alt="logo"
+            priority
           />
         </div>
 
