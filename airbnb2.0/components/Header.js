@@ -1,5 +1,6 @@
 import Image from "next/image";
 import SearchIcon from "@heroicons/react/solid/SearchIcon";
+import logo from "../public/Airbnb.png";
 import {
   GlobeAltIcon,
   MenuIcon,
@@ -14,23 +15,26 @@ function Header() {
         {/* Left */}
         <div className="relative flex items-center h-10 cursor-pointer my-auto">
           <Image
-            src="https://links.papareact.com/qd3"
+            src={logo}
             fill
             sizes="auto"
             style={{ objectFit: "contain", objectPosition: "left" }}
             alt="logo"
             priority
+            quality={100}
           />
         </div>
 
         {/* Middle */}
         <div className="flex md:shadow-sm items-center md:border-2 rounded-full py-2">
           <input
-            className="flex-grow pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400"
+            className="hidden lg:inline-flex md:inline-flex flex-grow pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400"
             type="text"
             placeholder="Start Your Search"
           />
-          <SearchIcon className="hidden md:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer md:mx-2" />
+          <div className="hidden md:inline-flex ">
+            <SearchIcon className=" hidden md:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer md:mx-2 sm:mx-2" />
+          </div>
         </div>
 
         {/* Right */}
